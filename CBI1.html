@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crook Bank Of India</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="CBI1_Style.css">
+</head>
+
+<body>
+    <div class="head">
+        <p>Crook Bank Of India</p>
+        <!-- <i class="fa-solid fa-circle"></i> -->
+    </div>
+    <div class="contaner">
+        <div class="part1" id="part1">
+            <p>Account Holder: </p><input type="text" class="ACholder label" id="ACholder" required>
+            <p>Account Number: </p><input type="number" class="ACnumber label" id="ACnumber" required>
+            <p>IFSC: </p><input type="text" class="IFSC label" id="IFSC" required>
+            <p class="Balance bala" id="LabelBal">Balacnce: </p><input type="number" class="Balance bala label"
+                id="Balance" placeholder="$0000" value="0">
+            <button class="submit" id="submit" >Search</button>
+
+        </div>
+        <div class="part2" id="part2">
+            <div class="field">
+                <i id="arrowW" class="fa-solid fa-arrow-left-long arrowAmount" onclick="arrowBackW()"></i>
+                <i id="arrowD" class="fa-solid fa-arrow-left-long arrowAmount" onclick="arrowBackD()"></i>
+                <div>
+                    <p id="Withdraw" class="Withdraw option" onclick="cashWithdraw()">Withdraw Cash <span
+                            style="float: right; font-weight: 900;">></span></p>
+
+                    <p class="optionAmount" id="OpAmountW">Withdraw Amount:</p>
+                    <input class="inputAmount" id="InAmountW" type="number">
+                    <input class="buttonAmount" id="BtnAmountW" type="button" value="Withdraw"
+                        onclick="confirmWithdraw()" style="background-color: orange; border-radius: 5px;">
+                    <p class="confirmAmount" id="ConAmountW"
+                        style="border: 1px solid gray; background-color: rgb(198, 251, 119); padding: 10px; border-radius: 5px; display: none;">
+                        Withdraw Succsessfull</p>
+                </div>
+                <p id="Deposit" class="deposit option" onclick="cashDeposit()">Deposit Cash<span
+                        style="float: right; font-weight: 900;">></p>
+                <div>
+                    <p class="optionAmount" id="OpAmountD">Deposit Amount:</p>
+                    <input class="inputAmount" id="InAmountD" type="number">
+                    <input class="buttonAmount" id="BtnAmountD" type="button" value="Deposit"
+                        onclick="confirmDeposit()" style="background-color: orange; border-radius: 5px;">
+                    <p class="confirmAmount" id="ConAmountD"
+                        style="border: 1px solid gray; background-color: rgb(198, 251, 119); padding: 10px; border-radius: 5px; display: none;">
+                        Deposit Succsessfull</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom" id="bottom">
+        <div>Copyright @ 2022 Crook Bank of India. All Rights Reserved</div>
+        <div>For More Information Wait For Me.</div>
+    </div>
+    <script src="CBI1_Script.js"></script>
+</body>
+
+</html>
